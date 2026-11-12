@@ -36,6 +36,12 @@ pi-ai inference call whose provider route looks like OpenCode, it sets
 auxiliary calls that carry none) before dispatch. pi-ai then leaves the header
 alone because it already exists, so a shipped route is unaffected.
 
+## Platforms
+
+Windows, Linux and macOS. The plugin is plain Node (no native module, no build step) and only
+contributes a header through the harness waterfall, so it runs wherever the harness runs. CI
+executes the packaging checks on all three operating systems.
+
 ## Configuration
 
 ```yaml
