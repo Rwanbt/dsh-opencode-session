@@ -36,6 +36,16 @@ pi-ai inference call whose provider route looks like OpenCode, it sets
 auxiliary calls that carry none) before dispatch. pi-ai then leaves the header
 alone because it already exists, so a shipped route is unaffected.
 
+## Exact OpenCode Go 2 configuration (reasoning levels)
+
+A hand-declared route does not inherit the pi-ai catalog, so it also loses each model's
+reasoning metadata and the composer hides the effort control. The file
+[`config/opencode-go-2.provider.yml`](config/opencode-go-2.provider.yml) is the complete
+provider block with `reasoningEfforts` mirroring what the gateway advertises per model, and
+[`config/README.md`](config/README.md) explains how to merge it into a fresh profile. The
+route still sends the effort as `reasoning_effort` over the OpenAI-compatible protocol, so the
+same block works for every upstream family the gateway translates.
+
 ## Platforms
 
 Windows, Linux and macOS. The plugin is plain Node (no native module, no build step) and only

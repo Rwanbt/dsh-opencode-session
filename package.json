@@ -1,6 +1,6 @@
 {
   "name": "dsh-opencode-session",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "type": "module",
   "description": "DeepSeek Harness plugin: sends the per-conversation x-opencode-session header that OpenCode Go requires on every route, including hand-declared ones.",
@@ -23,6 +23,7 @@
   "files": [
     "index.js",
     "cordis.patch.yml",
+    "config",
     "locale/*.json",
     "icon.svg",
     "README.md"
