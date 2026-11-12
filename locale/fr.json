@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "En-tête de session OpenCode",
+    "description": "Envoie l’en-tête x-opencode-session propre à chaque conversation, exigé par OpenCode Go, y compris pour les routes déclarées à la main comme un second abonnement Go."
+  }
+}

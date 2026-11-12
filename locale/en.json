@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "OpenCode session header",
+    "description": "Sends the per-conversation x-opencode-session header OpenCode Go requires, including for hand-declared routes such as a second Go subscription."
+  }
+}

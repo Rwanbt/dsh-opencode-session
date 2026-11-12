@@ -1,0 +1,12 @@
+# Bundle patch for dsh-opencode-session.
+#
+# One Host row: it contributes the `x-opencode-session` header to every pi-ai
+# inference call whose provider route is an OpenCode route. The OpenCode Go
+# gateway rejects a request without that header (400 MissingSessionID), and
+# pi-ai only adds it for the providers it ships — a hand-declared second route
+# such as `opencode-go-2` needs this contributor.
+- insert:
+    - id: opencode-session
+      name: dsh-opencode-session
+      config:
+        headerName: x-opencode-session
